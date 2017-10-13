@@ -13,6 +13,7 @@ namespace PH.Web.Controllers
             _hashAlgorithm = hashAlgorithm;
         }
 
+        [ResponseCache(Duration = 60)]
         public IActionResult Index(string plainText)
         {
             var result = new HashResult

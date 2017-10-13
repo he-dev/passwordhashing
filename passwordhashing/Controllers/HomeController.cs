@@ -6,6 +6,7 @@ namespace PH.Web.Controllers
 {
     public class HomeController : Controller
     {
+        [ResponseCache(Duration = 60*60)]
         public IActionResult Index()
         {
             return View();
