@@ -1,6 +1,4 @@
-using System;
-
-namespace passwordhashing.Models
+namespace PH.Web.Models
 {
     public class ErrorViewModel
     {

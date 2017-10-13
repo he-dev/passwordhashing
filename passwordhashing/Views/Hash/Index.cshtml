@@ -1,0 +1,28 @@
+﻿@model PH.Web.Models.HashResult
+@{
+    ViewData["Title"] = $"{Model.AlgorithmName}";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        
+        <ins class="adsbygoogle leaderboard-lg hidden-md mrec-sm mobile-xs" 
+             style="display: inline-block;" 
+             data-ad-client="ca-pub-8209112826554315" data-ad-slot="3898665385" data-ad-format="auto"></ins>
+        <h1>@Model.AlgorithmName Hashing</h1>
+        <form method="get">
+            <div class="form-group">
+                <label for="plainText">Plain Text</label>
+                <input type="text" class="form-control" id="plainText" name="plainText" placeholder="Plain Text" value="@Model.PlainText">
+            </div>
+            @if (!string.IsNullOrEmpty(Model.Hash))
+            {
+                <div class="form-group">
+                    <label>@Model.AlgorithmName Hash</label>
+                    <pre>@Model.Hash</pre>
+                </div>
+            }
+            <button type="submit" class="btn btn-primary">Generate Hash</button>
+        </form>
+    </div>
+</div>
