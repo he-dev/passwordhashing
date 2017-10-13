@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Joonasw.AspNetCore.SecurityHeaders;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PH.Web.Middleware;
 
 namespace PH.Web
 {
@@ -31,6 +33,13 @@ namespace PH.Web
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+                app.UseHttpsEnforcement();
+                app.UseHsts(new HstsOptions
+                {
+                    Seconds = 30 * 24 * 60 * 60,
+                    IncludeSubDomains = true,
+                    Preload = true
+                });
             }
 
             app.UseStaticFiles();
