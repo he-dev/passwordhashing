@@ -38,7 +38,7 @@ namespace PH.Web
                 app.UseHttpsEnforcement();
                 app.UseHsts(new HstsOptions
                 {
-                    Seconds = 180 * 24 * 60 * 60,
+                    Seconds = 365 * 24 * 60 * 60,
                     IncludeSubDomains = true,
                     Preload = true
                 });
