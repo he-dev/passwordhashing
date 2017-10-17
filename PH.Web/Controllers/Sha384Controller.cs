@@ -4,7 +4,7 @@ namespace PH.Web.Controllers
 {
     public class Sha384Controller : HashControllerBase
     {
-        public Sha384Controller() : base(new Sha384AlgorithmAdapter())
+        public Sha384Controller(ApplicationState state) : base(new Sha384AlgorithmAdapter(), state)
         {
         }
     }

@@ -21,6 +21,7 @@ namespace PH.Web
         {
             services.AddMvc();
             services.AddResponseCaching();
+            services.AddSingleton<ApplicationState>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

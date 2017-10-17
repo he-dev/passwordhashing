@@ -4,7 +4,7 @@ namespace PH.Web.Controllers
 {
     public class BCryptController : HashControllerBase
     {
-        public BCryptController() : base((HashAlgorithmAdapter) new BCryptAlgorithmAdapter())
+        public BCryptController(ApplicationState state) : base(new BCryptAlgorithmAdapter(), state)
         {
         }
     }

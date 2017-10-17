@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace PH.Web.Models
 {
     public class HashResult
@@ -5,5 +7,6 @@ namespace PH.Web.Models
         public string PlainText { get; set; }
         public string Hash { get; set; }
         public string AlgorithmName { get; set; }
+        public IList<string> RecentRequests { get; set; }
     }
 }

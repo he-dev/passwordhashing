@@ -4,7 +4,7 @@ namespace PH.Web.Controllers
 {
     public class Md5Controller : HashControllerBase
     {
-        public Md5Controller() : base(new Md5HashAlgorithmAdapter())
+        public Md5Controller(ApplicationState state) : base(new Md5HashAlgorithmAdapter(), state)
         {
         }
     }
