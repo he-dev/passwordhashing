@@ -9,3 +9,10 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.row.hashing-row {
+    background-color: #dcdcdc;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #5e5e5e;
+}
