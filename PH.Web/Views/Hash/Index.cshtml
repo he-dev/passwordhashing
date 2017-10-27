@@ -1,6 +1,13 @@
 ﻿@model PH.Web.Models.HashResult
 @{
-    ViewData["Title"] = $"{Model.AlgorithmName}";
+    if (string.IsNullOrEmpty(Model.PlainText))
+    {
+        ViewData["Title"] = $"{Model.AlgorithmName}";
+    }
+    else
+    {
+        ViewData["Title"] = $"{Model.AlgorithmName} hash of {Model.PlainText.Left(20)}";
+    }
 }
 
 <div class="row">
