@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@(string.IsNullOrEmpty(ViewData["Title"] as string) ? "" : $"{ViewData["Title"]} |") Password Hashing</title>
+    @RenderSection("head", false)
     @Html.Partial("_Favicons")
 
     <environment include="Development">
