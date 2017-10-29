@@ -67,3 +67,12 @@
         </ul>
     </div>
 </div>
+
+@if (!string.IsNullOrWhiteSpace(Model.HashDescription))
+{
+    <div class="row hashing-row">
+        <div class="col-md-12">
+            @Html.Raw(Model.HashDescription)
+        </div>
+    </div>
+}

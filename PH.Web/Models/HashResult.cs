@@ -10,5 +10,6 @@ namespace PH.Web.Models
         public IList<string> RecentRequests { get; set; }
         public string MetaDescription { get; set; }
         public string MetaKeywords { get; set; }
+        public string HashDescription { get; set; }
     }
 }
