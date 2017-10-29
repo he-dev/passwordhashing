@@ -12,7 +12,15 @@
 
 @section head
 {
-<link rel="canonical" href="https://passwordhashing.com/@(Model.AlgorithmName)" />
+    <link rel="canonical" href="https://passwordhashing.com/@(Model.AlgorithmName)" />
+    @if (!string.IsNullOrWhiteSpace(Model.MetaDescription))
+    {
+        <meta name="description" content="@Model.MetaDescription" />
+    }
+    @if (!string.IsNullOrWhiteSpace(Model.MetaKeywords))
+    {
+        <meta name="keywords" content="@Model.MetaKeywords" />
+    }
 }
 
 <div class="row">

@@ -9,6 +9,10 @@ namespace PH.Web.Controllers
         private readonly HashAlgorithmAdapter _hashAlgorithm;
         private readonly ApplicationState _applicationState;
 
+        protected virtual string MetaKeywords { get; } = string.Empty;
+
+        protected virtual string MetaDescription { get; } = string.Empty;
+
         protected HashControllerBase(HashAlgorithmAdapter hashAlgorithm, ApplicationState applicationState)
         {
             _hashAlgorithm = hashAlgorithm;
@@ -22,7 +26,9 @@ namespace PH.Web.Controllers
             {
                 PlainText = plainText,
                 AlgorithmName = _hashAlgorithm.Name,
-                RecentRequests = _applicationState.GetRecentHashes(_hashAlgorithm.Name)
+                RecentRequests = _applicationState.GetRecentHashes(_hashAlgorithm.Name),
+                MetaDescription = MetaDescription,
+                MetaKeywords = MetaKeywords
             };
 
             if (!string.IsNullOrEmpty(plainText))

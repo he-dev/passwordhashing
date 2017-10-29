@@ -8,5 +8,7 @@ namespace PH.Web.Models
         public string Hash { get; set; }
         public string AlgorithmName { get; set; }
         public IList<string> RecentRequests { get; set; }
+        public string MetaDescription { get; set; }
+        public string MetaKeywords { get; set; }
     }
 }
