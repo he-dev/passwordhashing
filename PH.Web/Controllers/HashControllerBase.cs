@@ -20,7 +20,7 @@ namespace PH.Web.Controllers
             _applicationState = applicationState;
         }
 
-        [ResponseCache(Duration = 60)]
+        [ResponseCache(Duration = 10 * 60)]
         public IActionResult Index(string plainText)
         {
             var result = new HashResult
