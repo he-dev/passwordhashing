@@ -1,9 +1,0 @@
-﻿{
-  "name": "message",
-  "topicName": "PH",
-  "subscriptionName": "Function",
-  "connection": "manage",
-  "accessRights": "<Access rights for the connection string - see below>",
-  "type": "serviceBusTrigger",
-  "direction": "in"
-}
