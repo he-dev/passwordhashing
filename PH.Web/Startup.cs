@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PH.Web.Middleware;
+using System;
 
 namespace PH.Web
 {
@@ -38,7 +39,7 @@ namespace PH.Web
                 app.UseHttpsEnforcement();
                 app.UseHsts(new HstsOptions
                 {
-                    Seconds = 365 * 24 * 60 * 60,
+                    Duration = TimeSpan.FromDays(365),
                     IncludeSubDomains = true,
                     Preload = true
                 });
