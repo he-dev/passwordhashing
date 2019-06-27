@@ -77,3 +77,20 @@
         </div>
     </div>
 }
+
+@if (!string.IsNullOrWhiteSpace(Model.PlainText))
+{
+    <div class="row hashing-row">
+        <div class="col-md-12">
+            <h2>Other Hash Algorithms</h2>
+            <ul>
+                <li><a title="Generate a BCrypt Hash" asp-area="" asp-controller="BCrypt" asp-action="Index" asp-route-plainText="@Model.PlainText">BCrypt hash of @Model.PlainText</a></li>
+                <li><a title="Generate a PBKDF2 Hash" asp-area="" asp-controller="PBKDF2" asp-action="Index" asp-route-plainText="@Model.PlainText">PBKDF2 hash of @Model.PlainText</a></li>
+                <li><a title="Generate a SHA1 Hash" asp-area="" asp-controller="SHA1" asp-action="Index" asp-route-plainText="@Model.PlainText">SHA1 hash of @Model.PlainText</a></li>
+                <li><a title="Generate a SHA256 Hash" asp-area="" asp-controller="SHA256" asp-action="Index" asp-route-plainText="@Model.PlainText">SHA256 hash of @Model.PlainText</a></li>
+                <li><a title="Generate a SHA384 Hash" asp-area="" asp-controller="SHA384" asp-action="Index" asp-route-plainText="@Model.PlainText">SHA384 hash of @Model.PlainText</a></li>
+                <li><a title="Generate a SHA512 Hash" asp-area="" asp-controller="SHA512" asp-action="Index" asp-route-plainText="@Model.PlainText">SHA512 hash of @Model.PlainText</a></li>
+            </ul>
+        </div>
+    </div>
+}
