@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\.well-known\brave-rewards-verification.txt" />
+    <Content Include="wwwroot\.well-known\**" CopyToPublishDirectory="PreserveNewest" Exclude="$(DefaultItemExcludes)" />
   </ItemGroup>
 
   <ItemGroup>
