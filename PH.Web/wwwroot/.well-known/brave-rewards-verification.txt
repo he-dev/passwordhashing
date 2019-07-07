@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: passwordhashing.com 
+Token: 1e0058c6e7181716a2e423aa0f0b9dcc05f409be620fb57a330154fb1f947543
